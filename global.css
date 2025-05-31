@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Font1";
+    src: url(/Font/ShinyCrystal-Yq3z4.ttf);
+}
+
+@font-face {
+    font-family: "Font2";
+    src: url(/Font/ArianaVioleta-dz2K.ttf);
+}
+
+body {
+  font-family: "Font1", sans-serif;
+}
