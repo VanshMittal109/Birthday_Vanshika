@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌷 Virtual Rose Garden</title>
+    <link rel="stylesheet" href="op9.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <h1 class="rose-heading">Garden!!!!</h1>
+    <div class="rose-garden">
+        <div class="rose" data-rose="red" tabindex="0" aria-label="Red Rose ❤️">🌹<span class="rose-emoji">❤️</span></div>
+        <div class="rose" data-rose="white" tabindex="0" aria-label="White Rose 🤍">🌹<span class="rose-emoji">🤍</span></div>
+        <div class="rose" data-rose="pink" tabindex="0" aria-label="Pink Rose 💗">🌹<span class="rose-emoji">💗</span></div>
+        <div class="rose" data-rose="yellow" tabindex="0" aria-label="Yellow Rose 💛">🌹<span class="rose-emoji">💛</span></div>
+        <div class="rose" data-rose="blue" tabindex="0" aria-label="Blue Rose 💙">🌹<span class="rose-emoji">💙</span></div>
+    </div>
+    <div id="roseModal" class="rose-modal">
+        <div class="rose-modal-content">
+            <span class="rose-modal-close" id="roseModalClose">&times;</span>
+            <div id="roseModalMessage"></div>
+        </div>
+    </div>
+    <script src="op9.js"></script>
+    <script src="bgMusic.js"></script>
+</body>
+</html>

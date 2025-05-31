@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel</title>
+    <link rel="stylesheet" href="op6.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <div class="wheel-container">
+        <h1 class="spin-heading">spinnyyyyy</h1>
+        <canvas id="wheel" width="350" height="350"></canvas>
+        <button id="spinBtn">SPIN</button>
+    </div>
+    <div id="result" class="result"></div>
+    <div id="popup" class="popup">
+        <span class="close" id="closePopup">&times;</span>
+        <img id="popupImg" src="" alt="Prize" />
+    </div>
+    <script src="op6.js"></script>
+    <script src="bgMusic.js"></script>
+</body>
+</html>

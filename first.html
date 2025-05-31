@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <a href="second.html">
+        <button class="top-right-button">Well!! You need to click here</button>
+    </a>
+
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <button class="first-button" onclick="showPage('second-page')">Click Me!</button>
+
+    <script src="bgMusic.js"></script>
+    <script>
+        function showPage(pageId) {
+            document.querySelector('.first-page').style.display = 'none';
+            document.querySelector('.' + pageId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

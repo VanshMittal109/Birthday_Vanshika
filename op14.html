@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎈 Pop the Balloon</title>
+    <link rel="stylesheet" href="op14.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <h1 class="balloon-heading">🎈 Pop the Balloon</h1>
+    <div id="game-container">
+        <div id="balloons-container"></div>
+    </div>
+    <div id="final-message" class="final-message" style="display: none;">
+        <div class="congrats">You popped all my love! 💝</div>
+        <div class="hearts"></div>
+    </div>
+    <audio id="popSound" preload="auto">
+        <source src="pop.mp3" type="audio/mpeg">
+    </audio>
+    <script src="op14.js"></script>
+    <script src="bgMusic.js"></script>
+    <script>
+        // Lower background music when pop sound plays
+        const popSound = document.getElementById('popSound');
+        popSound.addEventListener('play', function() {
+            document.getElementById('bgMusic').volume = 0.1; // Lower to 10%
+        });
+
+        // Restore background music volume when pop sound ends
+        popSound.addEventListener('ended', function() {
+            document.getElementById('bgMusic').volume = 0.3; // Back to 30%
+        });
+    </script>
+</body>
+</html>

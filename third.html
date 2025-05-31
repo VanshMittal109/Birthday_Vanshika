@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="third.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="first.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <div class="button1"></div>
+        <form id="redirectForm" method="get" target="_self">
+            <select name="page" id="buttonSelect" onchange="this.form.action=this.value;">
+                <option value="#">What You Wanna See!!!</option>
+                <option value="op13.html">Birthday Cake</option>
+                <option value="photobooth.html">Photo Booth</option>
+                <option value="op2.html">Letters</option>
+                <option value="op3.html">Confession booth</option>
+                <option value="op4.html">Scratchyyyyy</option>
+                <option value="op5.html">Lyrics sheets</option>
+                <option value="op6.html">spin the wheel</option>
+                <option value="op7.html">Surprise</option>
+                <option value="op16.html">Kiss Counter</option>
+                <option value="op9.html">Rose Garden</option>
+                <option value="op10.html">bucketlist</option>
+                <option value="op11.html">jigsaw</option>
+                <option value="op12.html">guess the Memory</option>
+                <option value="op14.html">pop the balloon</option>
+            </select>
+            <button type="submit" class="enterButton">Enter</button>
+        </form>
+
+    <script src="bgMusic.js"></script>
+</body>
+</html>

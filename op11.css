@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "Font1";
+    src: url(/Font/ShinyCrystal-Yq3z4.ttf);
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url("op11.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.top-right-button {
+    padding: 8px 15px;
+    background-color: #1f1d1d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: "Font1";
+}
+.puzzle-heading {
+    font-family: "Font1";
+    font-size: 2.7rem;
+    color: #b71c1c;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 8px #fff, 0 0 10px #b71c1c22;
+    font-weight: bold;
+}
+#puzzle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#puzzle-canvas {
+    width: 900px;
+    height: 900px;
+    max-width: 95vw;
+    max-height: 95vw;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px #b71c1c22;
+    margin-bottom: 18px;
+    touch-action: none;
+}
+#pieces-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    min-height: 80px;
+    max-width: 920px;
+    margin: 0 auto 10px auto;
+}
+.piece {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #b71c1c22;
+    cursor: grab;
+    background: #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+    position: relative;
+    touch-action: none;
+}
+.piece.dragging {
+    opacity: 0.7;
+    z-index: 10;
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px #b71c1c44;
+}
+#message-container {
+    text-align: center;
+    min-height: 60px;
+}
+#level-message {
+    font-family: "Font1";
+    font-size: 1.3rem;
+    color: #e75480;
+    margin: 18px 0 10px 0;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+#level-message.visible {
+    opacity: 1;
+}
+#next-level-btn {
+    font-family: "Font1";
+    font-size: 1.1rem;
+    background: #e75480;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 32px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #e7548055;
+    transition: background 0.3s, transform 0.2s;
+}
+#next-level-btn:hover {
+    background: #c2185b;
+    transform: scale(1.05);
+}
+#final-message {
+    text-align: center;
+    margin-top: 40px;
+}
+.congrats {
+    font-family: "Font1";
+    font-size: 2rem;
+    color: #e75480;
+    margin-bottom: 20px;
+}
+.heart {
+    width: 60px;
+    height: 54px;
+    background: #e75480;
+    position: relative;
+    margin: 0 auto;
+    animation: beat 1s infinite;
+}
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 54px;
+    background: #e75480;
+    border-radius: 30px 30px 0 0;
+}
+.heart:before { left: -30px; }
+.heart:after { left: 30px; }
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    10%, 30% { transform: scale(1.2); }
+    20%, 40% { transform: scale(1.1); }
+    50%, 60% { transform: scale(1.3); }
+    70%, 90% { transform: scale(1.1); }
+    80% { transform: scale(1.2); }
+}
+#loading-screen {
+    position: fixed;
+    z-index: 3000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Font1";
+    font-size: 1.3rem;
+    color: #e75480;
+}
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #e75480;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 18px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+@media (max-width: 950px) {
+    .puzzle-heading { font-size: 1.7rem; margin-top: 18px; }
+    #puzzle-canvas { width: 95vw; height: 95vw; }
+    .piece { width: 30vw; height: 30vw; min-width: 60px; min-height: 60px; }
+    #pieces-container { max-width: 100vw; }
+}

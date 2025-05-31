@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Font1";
+    src: url(/Font/ShinyCrystal-Yq3z4.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url('1op.png');  /* Save your image with this name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;  /* Positioned on the left side */
+    padding: 8px 15px;
+    background-color: #1f1d1d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: "Font1";
+}
+
+.back-button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    transform: scale(0.95);
+}
+
+a {
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.top-right-button {
+    position: relative;
+    top: auto;
+    right: auto;
+    padding: 6px 12px;
+    background-color: #1f1d1d;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: "Font1";
+}
+
+.top-right-button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+.top-right-button:active {
+    transform: scale(0.95);
+}
+
+.bottom-center-button {
+    position: fixed;
+    padding: 8px 16px;
+    background-color: #1f1d1d;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: "Font1";
+    bottom: 32%;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.bottom-center-button:hover {
+    background-color: #ff5252;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.bottom-center-button:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* Update the anchor position to match */
+a:nth-of-type(2) {
+    position: fixed;
+    bottom: 35%;  /* Match the button's new bottom value */
+    left: 45%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.slider-container {
+    position: relative;
+    width: 78%;
+    height: 55%;
+    margin: 15% auto 0 18%;
+    background-color: #f3f3f3;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 120px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 104%;
+    transform: translateY(-50%);
+    background-color: #1f1d1d;
+    color: #fff;
+    border: none;
+    padding: 8px 21px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100%;
+    font-family: "Font1";
+    font-size: 32px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.prev-button {
+    left: 80px;
+}
+
+.next-button {
+    right: 80px;
+}

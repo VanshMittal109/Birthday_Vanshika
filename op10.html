@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Our Bucket List</title>
+    <link rel="stylesheet" href="op10.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <h1 class="bucket-heading">Bucket List</h1>
+    <div class="bucket-img-container">
+        <img id="bucketImg" src="bucket.png" alt="Bucket" class="bucket-img" />
+    </div>
+    <button id="shakeBtn" class="shake-btn">Shake!</button>
+    
+    <ul id="bucketList" class="bucket-list"></ul>
+    <audio id="partySound" src="party.mp3"></audio>
+    <script src="op10.js"></script>
+    <script src="bgMusic.js"></script>
+    <script>
+        // Lower background music when party sound plays
+        const partySound = document.getElementById('partySound');
+        partySound.addEventListener('play', function() {
+            document.getElementById('bgMusic').volume = 0.1; // Lower to 10%
+        });
+
+        // Restore background music volume when party sound ends
+        partySound.addEventListener('ended', function() {
+            document.getElementById('bgMusic').volume = 0.3; // Back to 30%
+        });
+    </script>
+</body>
+</html>

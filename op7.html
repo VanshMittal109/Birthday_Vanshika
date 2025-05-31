@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hug Me</title>
+    <link rel="stylesheet" href="op7.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <div class="hug-container">
+        <button id="hugBtn" class="hug-btn">click here</button>
+    </div>
+    <div id="hugPopup" class="hug-popup">
+        <span class="close" id="closeHugPopup">&times;</span>
+        <video id="hugVideo" width="134" height="238" autoplay loop muted playsinline style="border-radius:20px;box-shadow:0 4px 16px #e7548033;">
+            <source src="hugv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hug-message">Tight hug, baby 🧸💖</div>
+        <audio id="heartbeat" src="heartbeat.mp3"></audio>
+    </div>
+    <script src="op7.js"></script>
+    <script src="bgMusic.js"></script>
+    <script>
+        // Lower background music when heartbeat plays
+        const heartbeat = document.getElementById('heartbeat');
+        heartbeat.addEventListener('play', function() {
+            document.getElementById('bgMusic').volume = 0.1; // Lower to 10%
+        });
+
+        // Restore background music volume when heartbeat ends
+        heartbeat.addEventListener('ended', function() {
+            document.getElementById('bgMusic').volume = 0.3; // Back to 30%
+        });
+    </script>
+</body>
+</html>

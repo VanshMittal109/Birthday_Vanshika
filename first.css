@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Font1";
+    src: url(/Font/ShinyCrystal-Yq3z4.ttf);
+}
+
+@font-face {
+    font-family: "Font2";
+    src: url(/Font/ArianaVioleta-dz2K.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh; /* This ensures full viewport height */
+    margin: 0;
+    background-image: url('Orange\ &\ Beige\ Modern\ Aesthetic\ Scrapbook\ Birthday\ Photo\ Collage\ WhatsApp\ Status\ 5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Ensure content stays within phone dimensions */
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media query for device-specific dimensions */
+@media screen and (max-width: 610px) {
+    body {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+a {
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.top-right-button {
+    position: relative;  /* Change from fixed to relative */
+    top: auto;          /* Remove top positioning */
+    right: auto;        /* Remove right positioning */
+    padding: 8px 15px;
+    background-color: #1f1d1d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-family: "Font1";
+}
+
+.top-right-button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+.top-right-button:active {
+    transform: scale(0.95);
+} 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧩 Puzzle Game with Our Photo</title>
+    <link rel="stylesheet" href="op11.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <h1 class="puzzle-heading">🧩 Puzzle</h1>
+    <div id="puzzle-container">
+        <canvas id="puzzle-canvas" width="600" height="600"></canvas>
+        <div id="pieces-container"></div>
+    </div>
+    <div id="message-container">
+        <div id="level-message"></div>
+        <button id="next-level-btn" style="display:none;">Next Level</button>
+    </div>
+    <div id="final-message" style="display:none;">
+        <div class="congrats">Congratulations! You completed all puzzles! 💖</div>
+        <div class="heart"></div>
+    </div>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div>Loading images...</div>
+    </div>
+    <script src="op11.js"></script>
+    <script src="bgMusic.js"></script>
+</body>
+</html>

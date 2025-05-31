@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>📸 Photo Booth</title>
+    <link rel="stylesheet" href="photobooth.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+        <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+    </audio>
+    <a href="third.html">
+        <button class="top-right-button">Back to Home</button>
+    </a>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="photobooth/photo1.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo2.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo3.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo4.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo5.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo6.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo7.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo8.jpg" alt="Image 1" class="active">K
+            <img src="photobooth/photo9.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo10.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo11.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo27.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo28.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo29.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo30.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo31.jpg" alt="Image 1" class="active">
+            <img src="photobooth/photo32.jpg" alt="Image 1" class="active">
+            <!-- Add more images here -->
+        </div>
+        <button class="prev-button"> < </button>
+        <button class="next-button">></button>
+    </div>
+    <script src="photobooth.js"></script>
+    <script src="bgMusic.js"></script>
+    <script>
+        // Lower background music when shutter sound plays
+        const shutterSound = document.getElementById('shutterSound');
+        shutterSound.addEventListener('play', function() {
+            document.getElementById('bgMusic').volume = 0.1; // Lower to 10%
+        });
+
+        // Restore background music volume when shutter sound ends
+        shutterSound.addEventListener('ended', function() {
+            document.getElementById('bgMusic').volume = 0.3; // Back to 30%
+        });
+    </script>
+</body>
+</html>
